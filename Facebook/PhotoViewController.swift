@@ -9,13 +9,13 @@
 import UIKit
 
 class PhotoViewController: UIViewController {
-    var image: UIImage!
+    var weddingImage: UIImage!
    
     @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = image
+        imageView.image = weddingImage
         // Do any additional setup after loading the view.
     }
 

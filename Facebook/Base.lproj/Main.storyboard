@@ -179,13 +179,14 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="News Feed" id="FxJ-pH-15i"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1135"/>
                     <connections>
                         <outlet property="NewsFeedImageView" destination="1Vb-QA-Fub" id="xVs-RT-Zt4"/>
                         <outlet property="NewsFeedScrollView" destination="XTW-oS-bvP" id="ftR-GT-kwN"/>
                         <outlet property="activityIndicator" destination="MRb-7U-mR0" id="fvd-sa-rOY"/>
-                        <segue destination="oYH-tM-WAy" kind="modal" identifier="photoSegue" animates="NO" id="jnB-25-xG4"/>
+                        <segue destination="oYH-tM-WAy" kind="modal" identifier="photoSegue" id="jnB-25-xG4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2x-hd-0ag" userLabel="First Responder" sceneMemberID="firstResponder"/>

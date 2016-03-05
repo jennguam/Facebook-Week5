@@ -28,6 +28,9 @@
 		7FF969841C6B20D200887A82 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF969831C6B20D200887A82 /* Common.swift */; };
 		7FF969861C6C202A00887A82 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF969851C6C202A00887A82 /* UIViewExtensions.swift */; };
 		AE2FCB791C896E0100BF6632 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2FCB781C896E0100BF6632 /* PhotoViewController.swift */; };
+		AE6F93871C8A6DEE0035052A /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F93851C8A6DEE0035052A /* BaseTransition.swift */; };
+		AE6F93881C8A6DEE0035052A /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F93861C8A6DEE0035052A /* FadeTransition.swift */; };
+		AE6F938A1C8A74B30035052A /* LightboxTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F93891C8A74B30035052A /* LightboxTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +77,10 @@
 		7FF969811C6B1A5900887A82 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7FF969831C6B20D200887A82 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7FF969851C6C202A00887A82 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		AE2FCB781C896E0100BF6632 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = Facebook/PhotoViewController.swift; sourceTree = "<group>"; };
+		AE2FCB781C896E0100BF6632 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		AE6F93851C8A6DEE0035052A /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		AE6F93861C8A6DEE0035052A /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		AE6F93891C8A74B30035052A /* LightboxTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightboxTransition.swift; path = ../LightboxTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +111,6 @@
 		7F06805A1C62F95200AB20E9 = {
 			isa = PBXGroup;
 			children = (
-				AE2FCB781C896E0100BF6632 /* PhotoViewController.swift */,
 				7F0680651C62F95200AB20E9 /* Facebook */,
 				7F06807A1C62F95200AB20E9 /* FacebookTests */,
 				7F0680851C62F95200AB20E9 /* FacebookUITests */,
@@ -130,6 +135,9 @@
 				7FF969851C6C202A00887A82 /* UIViewExtensions.swift */,
 				7F0680661C62F95200AB20E9 /* AppDelegate.swift */,
 				7F0680681C62F95200AB20E9 /* ViewController.swift */,
+				AE6F93891C8A74B30035052A /* LightboxTransition.swift */,
+				AE6F93851C8A6DEE0035052A /* BaseTransition.swift */,
+				AE6F93861C8A6DEE0035052A /* FadeTransition.swift */,
 				7F06806A1C62F95200AB20E9 /* Main.storyboard */,
 				7F06809E1C62FEFF00AB20E9 /* View Controllers */,
 				7F06806D1C62F95200AB20E9 /* Assets.xcassets */,
@@ -170,6 +178,7 @@
 				7F0680981C62FEBF00AB20E9 /* MessagesViewController.swift */,
 				7F0680961C62FEAF00AB20E9 /* RequestsViewController.swift */,
 				7F0680941C62FE9400AB20E9 /* NewsFeedViewController.swift */,
+				AE2FCB781C896E0100BF6632 /* PhotoViewController.swift */,
 				7F06809C1C62FEE300AB20E9 /* MoreViewController.swift */,
 			);
 			name = "View Controllers";
@@ -315,14 +324,17 @@
 				7F0680991C62FEBF00AB20E9 /* MessagesViewController.swift in Sources */,
 				7F0680691C62F95200AB20E9 /* ViewController.swift in Sources */,
 				7F04E5E81C637C32005455A8 /* DetailViewController.swift in Sources */,
+				AE6F938A1C8A74B30035052A /* LightboxTransition.swift in Sources */,
 				7F0680671C62F95200AB20E9 /* AppDelegate.swift in Sources */,
 				7FF969841C6B20D200887A82 /* Common.swift in Sources */,
 				7F0680A21C630DE100AB20E9 /* CreatePhotoViewController.swift in Sources */,
 				7F06809B1C62FED300AB20E9 /* NotificationsViewController.swift in Sources */,
+				AE6F93881C8A6DEE0035052A /* FadeTransition.swift in Sources */,
 				7F0680A61C630DED00AB20E9 /* CreateCheckinViewController.swift in Sources */,
 				7F0680A41C630DE700AB20E9 /* CreateStatusViewController.swift in Sources */,
 				7F0680971C62FEAF00AB20E9 /* RequestsViewController.swift in Sources */,
 				AE2FCB791C896E0100BF6632 /* PhotoViewController.swift in Sources */,
+				AE6F93871C8A6DEE0035052A /* BaseTransition.swift in Sources */,
 				7F0680951C62FE9400AB20E9 /* NewsFeedViewController.swift in Sources */,
 				7F0680A01C630A6A00AB20E9 /* ThrillistDetailViewController.swift in Sources */,
 			);
