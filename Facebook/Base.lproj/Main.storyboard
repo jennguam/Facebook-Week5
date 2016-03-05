@@ -179,7 +179,6 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="News Feed" id="FxJ-pH-15i"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1135"/>
                     <connections>
@@ -404,7 +403,7 @@
         <!--Photo View Controller-->
         <scene sceneID="pxI-sG-TZy">
             <objects>
-                <viewController id="oYH-tM-WAy" customClass="PhotoViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="oYH-tM-WAy" customClass="PhotoViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KK3-IU-T0g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -427,25 +426,28 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="photo_actions" id="w93-tO-qhu">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="XOe-Ma-8d9">
-                                <rect key="frame" x="0.0" y="57" width="320" height="466"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Bzc-ws-ddm">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="466"/>
+                                        <rect key="frame" x="0.0" y="57" width="320" height="466"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                             </scrollView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="photo_actions" id="w93-tO-qhu">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="rgQ-6b-Zdm" id="DuE-R3-b1S"/>
                         <outlet property="imageView" destination="Bzc-ws-ddm" id="ZvW-QI-KDe"/>
+                        <outlet property="overallView" destination="leO-ns-Hb3" id="Z5g-4d-NKy"/>
+                        <outlet property="photoActions" destination="w93-tO-qhu" id="VDQ-1c-mG7"/>
+                        <outlet property="scrollView" destination="XOe-Ma-8d9" id="u1N-9J-G6N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMs-My-2nx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -669,7 +671,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="PTT-Qp-tQX" kind="relationship" relationship="rootViewController" id="J2O-xY-Yim"/>
+                        <segue destination="PTT-Qp-tQX" kind="relationship" relationship="rootViewController" id="xyF-Xn-2e4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEv-mg-QAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -788,6 +790,6 @@
         <image name="wedding5" width="480" height="320"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pOo-FG-8KG"/>
+        <segue reference="xyF-Xn-2e4"/>
     </inferredMetricsTieBreakers>
 </document>

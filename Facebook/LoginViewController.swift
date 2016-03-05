@@ -2,9 +2,8 @@
 //  LoginViewController.swift
 //  Facebook
 //
-//  Created by Jared on 2/9/16.
-//  Copyright © 2016 plainspace. All rights reserved.
-//
+//  Created by Jenn Leung on 2/9/16.
+
 
 import UIKit
 

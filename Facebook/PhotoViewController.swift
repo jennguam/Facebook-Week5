@@ -8,17 +8,21 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class PhotoViewController: UIViewController, UIScrollViewDelegate {
     var weddingImage: UIImage!
-   
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var photoActions: UIImageView!
+    @IBOutlet var doneButton: UIImageView!
+    @IBOutlet var overallView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.delegate = self
         imageView.image = weddingImage
-        // Do any additional setup after loading the view.
+        scrollView.contentSize = CGSize(width: 320, height: 1000)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -26,18 +30,51 @@ class PhotoViewController: UIViewController {
     
     @IBAction func onDone(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
-
+        
     }
-   
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func scrollViewDidScroll(scrollView: UIScrollView!) {
+        print("start scrolling")
+        if scrollView.contentOffset.y > 0 {
+            overallView.backgroundColor = UIColor(white: 0, alpha: 1-(scrollView.contentOffset.y/100))
+        } else if scrollView.contentOffset.y < 0 {
+            overallView.backgroundColor = UIColor(white: 0, alpha: 1-(scrollView.contentOffset.y * -0.01))
+        }
     }
-    */
-
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView!) {
+        UIView.animateWithDuration(0.2) { () -> Void in
+            self.photoActions.alpha = 0
+            self.doneButton.alpha = 0
+        }
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView!,
+        willDecelerate decelerate: Bool) {
+            if scrollView.contentOffset.y >= 70 {
+                dismissViewControllerAnimated(true, completion: nil)
+            } else if scrollView.contentOffset.y <= -70 {
+                dismissViewControllerAnimated(true, completion: nil)
+            } else if scrollView.contentOffset.y > 0 && scrollView.contentOffset.y < 70 {
+                print("should animate back")
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    self.scrollView.contentOffset.y = 0
+                    self.scrollView.backgroundColor = UIColor(white: 0, alpha: 1)
+                    self.doneButton.alpha = 1
+                    self.photoActions.alpha = 1
+                })
+            } else if scrollView.contentOffset.y < 0 && scrollView.contentOffset.y > -70 {
+                
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    self.doneButton.alpha = 1
+                    self.photoActions.alpha = 1
+                })
+            }
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView!) {
+        // This method is called when the scrollview finally stops scrolling.
+    }
+    
+    
 }
