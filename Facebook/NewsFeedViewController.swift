@@ -19,6 +19,7 @@ class NewsFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lightboxTransition = LightboxTransition()
+        //lightboxTransition.heyQT = "what"
         NewsFeedScrollView.contentSize = homeFeedImageView.image!.size
         
     }
@@ -58,9 +59,8 @@ class NewsFeedViewController: UIViewController {
 
     
         photoViewController.weddingImage = selectedImageView.image
-        print("I'm about to transition")
-        
-        
+        lightboxTransition.selectedImageCenter = selectedImageView.center
+        print(selectedImageView.center)
         
         
     }

@@ -3,14 +3,16 @@
 //  Facebook
 //
 //  Created by Jenn Leung on 3/4/16.
-//  Copyright © 2016 plainspace. All rights reserved.
 //
+
 
 import UIKit
 
 class LightboxTransition: BaseTransition {
+    var selectedImageCenter: CGPoint!
     
     override func presentTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
+        
         
         toViewController.view.alpha = 0
         toViewController.view.transform = CGAffineTransformMakeScale(0,0)
@@ -28,6 +30,7 @@ class LightboxTransition: BaseTransition {
         UIView.animateWithDuration(duration, animations: {
             fromViewController.view.alpha = 0
             fromViewController.view.transform = CGAffineTransformMakeScale(0.001,0.001)
+            fromViewController.view.center = CGPoint(x: self.selectedImageCenter.x, y: self.selectedImageCenter.y + 120)
             }) { (finished: Bool) -> Void in
                 self.finish()
         }

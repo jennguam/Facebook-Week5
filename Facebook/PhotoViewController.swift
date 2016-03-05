@@ -15,11 +15,13 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var photoActions: UIImageView!
     @IBOutlet var doneButton: UIImageView!
     @IBOutlet var overallView: UIView!
+    var selectedImageCenter: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
         imageView.image = weddingImage
+        
         scrollView.contentSize = CGSize(width: 320, height: 1000)
     }
     
