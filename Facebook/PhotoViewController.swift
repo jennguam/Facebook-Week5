@@ -33,29 +33,29 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView!) {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
         print("start scrolling")
         if scrollView.contentOffset.y > 0 {
-            overallView.backgroundColor = UIColor(white: 0, alpha: 1-(scrollView.contentOffset.y/100))
+            overallView.backgroundColor = UIColor(white: 0, alpha: 1-(scrollView.contentOffset.y * 0.01))
         } else if scrollView.contentOffset.y < 0 {
             overallView.backgroundColor = UIColor(white: 0, alpha: 1-(scrollView.contentOffset.y * -0.01))
         }
     }
     
-    func scrollViewWillBeginDragging(scrollView: UIScrollView!) {
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         UIView.animateWithDuration(0.2) { () -> Void in
             self.photoActions.alpha = 0
             self.doneButton.alpha = 0
         }
     }
     
-    func scrollViewDidEndDragging(scrollView: UIScrollView!,
+    func scrollViewDidEndDragging(scrollView: UIScrollView,
         willDecelerate decelerate: Bool) {
-            if scrollView.contentOffset.y >= 70 {
+            if scrollView.contentOffset.y >= 60 {
                 dismissViewControllerAnimated(true, completion: nil)
-            } else if scrollView.contentOffset.y <= -70 {
+            } else if scrollView.contentOffset.y <= -60 {
                 dismissViewControllerAnimated(true, completion: nil)
-            } else if scrollView.contentOffset.y > 0 && scrollView.contentOffset.y < 70 {
+            } else if scrollView.contentOffset.y > 0 && scrollView.contentOffset.y < 60 {
                 print("should animate back")
                 UIView.animateWithDuration(0.5, animations: { () -> Void in
                     self.scrollView.contentOffset.y = 0
@@ -63,7 +63,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
                     self.doneButton.alpha = 1
                     self.photoActions.alpha = 1
                 })
-            } else if scrollView.contentOffset.y < 0 && scrollView.contentOffset.y > -70 {
+            } else if scrollView.contentOffset.y < 0 && scrollView.contentOffset.y > -60 {
                 
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
                     self.doneButton.alpha = 1
@@ -72,9 +72,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
             }
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView!) {
-        // This method is called when the scrollview finally stops scrolling.
-    }
     
     
 }

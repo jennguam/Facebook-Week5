@@ -7,8 +7,8 @@ import UIKit
 
 class NewsFeedViewController: UIViewController {
     
+    @IBOutlet var homeFeedImageView: UIImageView!
     @IBOutlet weak var NewsFeedScrollView: UIScrollView!
-    @IBOutlet weak var NewsFeedImageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var isPresenting: Bool = true
@@ -19,7 +19,7 @@ class NewsFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lightboxTransition = LightboxTransition()
-        NewsFeedScrollView.contentSize = NewsFeedImageView.image!.size
+        NewsFeedScrollView.contentSize = homeFeedImageView.image!.size
         
     }
     

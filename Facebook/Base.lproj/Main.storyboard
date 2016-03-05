@@ -97,8 +97,8 @@
                                 <rect key="frame" x="0.0" y="110" width="320" height="976"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_feed" id="1Vb-QA-Fub">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1025"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_feed-1" id="daf-P2-5bN">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1438"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L7s-sA-Q8J">
@@ -109,7 +109,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding3" id="Y2A-Lb-W8h">
-                                        <rect key="frame" x="166" y="319" width="157" height="128"/>
+                                        <rect key="frame" x="163" y="83" width="153" height="101"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -117,23 +117,15 @@
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding5" id="H8P-3j-A1r">
-                                        <rect key="frame" x="166" y="190" width="157" height="128"/>
+                                        <rect key="frame" x="161" y="293" width="154" height="103"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="pSt-C3-6EX" appends="YES" id="9Tx-vi-iTu"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding4" id="cC4-nc-cPV">
-                                        <rect key="frame" x="167" y="60" width="151" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="sgh-Ps-CCk" appends="YES" id="BGh-4t-QYi"/>
-                                        </connections>
-                                    </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding2" id="m9k-eR-mnW">
-                                        <rect key="frame" x="3" y="60" width="162" height="195"/>
+                                        <rect key="frame" x="4" y="240" width="154" height="155"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -141,11 +133,19 @@
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding1" id="ies-6T-Hhd">
-                                        <rect key="frame" x="3" y="253" width="162" height="195"/>
+                                        <rect key="frame" x="5" y="83" width="153" height="154"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="BYL-RO-yXU" appends="YES" id="qsO-da-e60"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding4" id="cC4-nc-cPV">
+                                        <rect key="frame" x="161" y="187" width="155" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="sgh-Ps-CCk" appends="YES" id="BGh-4t-QYi"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -182,9 +182,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1135"/>
                     <connections>
-                        <outlet property="NewsFeedImageView" destination="1Vb-QA-Fub" id="xVs-RT-Zt4"/>
                         <outlet property="NewsFeedScrollView" destination="XTW-oS-bvP" id="ftR-GT-kwN"/>
                         <outlet property="activityIndicator" destination="MRb-7U-mR0" id="fvd-sa-rOY"/>
+                        <outlet property="homeFeedImageView" destination="daf-P2-5bN" id="UXR-9k-Hfw"/>
                         <segue destination="oYH-tM-WAy" kind="modal" identifier="photoSegue" id="jnB-25-xG4"/>
                     </connections>
                 </viewController>
@@ -411,19 +411,6 @@
                             <view contentMode="scaleToFill" id="leO-ns-Hb3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="doneButton" id="rgQ-6b-Zdm">
-                                        <rect key="frame" x="261" y="19" width="51" height="27"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dbf-7O-dHe">
-                                        <rect key="frame" x="261" y="17" width="51" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="onDone:" destination="oYH-tM-WAy" eventType="touchUpInside" id="oCq-RL-VKb"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="XOe-Ma-8d9">
@@ -434,6 +421,17 @@
                                         <rect key="frame" x="0.0" y="57" width="320" height="466"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="doneButton" id="rgQ-6b-Zdm">
+                                        <rect key="frame" x="256" y="16" width="51" height="27"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dbf-7O-dHe">
+                                        <rect key="frame" x="256" y="14" width="51" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="onDone:" destination="oYH-tM-WAy" eventType="touchUpInside" id="oCq-RL-VKb"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="photo_actions" id="w93-tO-qhu">
@@ -764,7 +762,7 @@
         <image name="doneButton" width="51" height="27"/>
         <image name="feed_tab" width="27" height="27"/>
         <image name="form_bg" width="295" height="95"/>
-        <image name="home_feed" width="320" height="1025"/>
+        <image name="home_feed-1" width="320" height="1438"/>
         <image name="like_btn" width="17" height="40"/>
         <image name="like_btn_selected" width="17" height="40"/>
         <image name="logging_in_button" width="293" height="52"/>
