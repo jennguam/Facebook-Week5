@@ -35,10 +35,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        print("start scrolling")
-        
-        print(scrollView.contentOffset.y)
-        
         
         let alphaPositive = convertValue(scrollView.contentOffset.y, r1Min: 0, r1Max: 250, r2Min: 1, r2Max: 0)
         let alphaNegative = convertValue(scrollView.contentOffset.y, r1Min: 0, r1Max: -250, r2Min: 1, r2Max: 0)

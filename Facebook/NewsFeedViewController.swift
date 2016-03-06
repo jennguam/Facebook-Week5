@@ -63,7 +63,7 @@ class NewsFeedViewController: UIViewController {
         //print(photoArray[selectedImageView.image.index+1])
         //trying to grab index of array and so i could show previous and next photos
         print("0 indexed : \(photoArray[0])")
-        print(selectedImageView)
+        print(photoArray.indexOf(selectedImageView))
         lightboxTransition.selectedImageCenter = selectedImageView.center
         //print(selectedImageView.center)
         
