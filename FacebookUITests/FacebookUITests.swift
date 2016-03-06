@@ -2,9 +2,6 @@
 //  FacebookUITests.swift
 //  FacebookUITests
 //
-//  Created by Jared on 2/3/16.
-//  Copyright © 2016 plainspace. All rights reserved.
-//
 
 import XCTest
 

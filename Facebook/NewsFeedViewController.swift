@@ -7,10 +7,11 @@ import UIKit
 
 class NewsFeedViewController: UIViewController {
     
+    @IBOutlet var photoArray: [UIImageView]!
+    
     @IBOutlet var homeFeedImageView: UIImageView!
     @IBOutlet weak var NewsFeedScrollView: UIScrollView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     var isPresenting: Bool = true
     var selectedImageView: UIImageView!
     var fadeTransition: FadeTransition!
@@ -21,7 +22,7 @@ class NewsFeedViewController: UIViewController {
         lightboxTransition = LightboxTransition()
         //lightboxTransition.heyQT = "what"
         NewsFeedScrollView.contentSize = homeFeedImageView.image!.size
-        
+        //print (photoArray)
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,8 +60,12 @@ class NewsFeedViewController: UIViewController {
 
     
         photoViewController.weddingImage = selectedImageView.image
+        //print(photoArray[selectedImageView.image.index+1])
+        //trying to grab index of array and so i could show previous and next photos
+        print("0 indexed : \(photoArray[0])")
+        print(selectedImageView)
         lightboxTransition.selectedImageCenter = selectedImageView.center
-        print(selectedImageView.center)
+        //print(selectedImageView.center)
         
         
     }

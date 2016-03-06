@@ -478,7 +478,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Facebook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = plainspace.Facebook;
+				PRODUCT_BUNDLE_IDENTIFIER = jennguam.Facebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -489,7 +489,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Facebook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = plainspace.Facebook;
+				PRODUCT_BUNDLE_IDENTIFIER = jennguam.Facebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -500,7 +500,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FacebookTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = plainspace.FacebookTests;
+				PRODUCT_BUNDLE_IDENTIFIER = jennguam.FacebookTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Facebook.app/Facebook";
 			};
@@ -512,7 +512,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FacebookTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = plainspace.FacebookTests;
+				PRODUCT_BUNDLE_IDENTIFIER = jennguam.FacebookTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Facebook.app/Facebook";
 			};
@@ -523,7 +523,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = FacebookUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = plainspace.FacebookUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = jennguam.FacebookUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Facebook;
 				USES_XCTRUNNER = YES;
@@ -535,7 +535,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = FacebookUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = plainspace.FacebookUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = jennguam.FacebookUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Facebook;
 				USES_XCTRUNNER = YES;
