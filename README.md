@@ -19,3 +19,5 @@ Optionals Completed
 Optional: The full screen photo should be zoomable.
 (implemented and works, but is buggy when combined with horizontal scrolling)
 Optional: The user should be able to page through the other photos in full screen mode.
+
+![](https://github.com/jennguam/Facebook-Week5/blob/master/FacebookTransition_Walkthrough.gif)
