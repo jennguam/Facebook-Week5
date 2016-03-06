@@ -21,12 +21,12 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         scrollView.delegate = self
         
-        var imageWidth: CGFloat = 320
-        var frameHeight: CGFloat = 444
+        let imageWidth: CGFloat = 320
+        let frameHeight: CGFloat = 444
         var xPosition: CGFloat = 0
         var scrollViewContentSize: CGFloat = 0
-        //var myImage: UIImage = //array of UIImage
-        //To create the UIImageViews that goes into your scrollview.
+        
+        //To create the UIImageViews that goes into scrollview.
         
         for var index = 0; index < weddingImages.count; index++ {
             
@@ -43,10 +43,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
             myImageView.frame.origin.y = 0
             
             myImageView.frame.offsetInPlace(dx: 0, dy: (frameHeight - myImage.size.height - 20) / 2)
-            print("frameheight \(frameHeight)")
-            print("height \(myImage.size.height)")
-            print((frameHeight - myImage.size.height) / 2)
-            
             scrollView.addSubview(myImageView)
             
             xPosition += imageWidth
