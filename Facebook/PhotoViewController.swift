@@ -8,7 +8,8 @@
 import UIKit
 
 class PhotoViewController: UIViewController, UIScrollViewDelegate {
-    var weddingImage: UIImage!
+    var weddingImageIndex: Int!
+    var weddingImages: [UIImageView]!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var photoActions: UIImageView!
@@ -19,9 +20,42 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
-        imageView.image = weddingImage
         
-        scrollView.contentSize = CGSize(width: 320, height: 900)
+        var imageWidth: CGFloat = 320
+        var frameHeight: CGFloat = 444
+        var xPosition: CGFloat = 0
+        var scrollViewContentSize: CGFloat = 0
+        //var myImage: UIImage = //array of UIImage
+        //To create the UIImageViews that goes into your scrollview.
+        
+        for var index = 0; index < weddingImages.count; index++ {
+            
+            let myImageViewOld: UIImageView = weddingImages[index]
+            let myImage : UIImage = myImageViewOld.image!
+            
+            let myImageView: UIImageView = UIImageView()
+            myImageView.image = myImage
+            myImageView.contentMode = .ScaleAspectFit
+            
+            myImageView.frame.size.width = imageWidth
+            myImageView.frame.size.height = myImage.size.height
+            myImageView.frame.origin.x = xPosition
+            myImageView.frame.origin.y = 0
+            
+            myImageView.frame.offsetInPlace(dx: 0, dy: (frameHeight - myImage.size.height - 20) / 2)
+            print("frameheight \(frameHeight)")
+            print("height \(myImage.size.height)")
+            print((frameHeight - myImage.size.height) / 2)
+            
+            scrollView.addSubview(myImageView)
+            
+            xPosition += imageWidth
+            scrollViewContentSize += imageWidth
+            
+        }
+        scrollView.contentSize = CGSize(width: scrollViewContentSize, height: frameHeight)
+        let offset = CGPoint(x: CGFloat(weddingImageIndex) * imageWidth, y: 0)
+        scrollView.setContentOffset(offset, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,7 +65,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func onDone(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
-        
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -76,6 +109,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
                 })
             }
     }
+    
     func viewForZoomingInScrollView(scrollView: UIScrollView!) -> UIView! {
         return imageView
     }

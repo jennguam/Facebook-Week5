@@ -419,30 +419,30 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" maximumZoomScale="2" id="XOe-Ma-8d9">
-                                <rect key="frame" x="0.0" y="0.0" width="1600" height="568"/>
+                                <rect key="frame" x="0.0" y="61" width="320" height="443"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Bzc-ws-ddm">
-                                        <rect key="frame" x="0.0" y="57" width="320" height="466"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="444"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="doneButton" id="rgQ-6b-Zdm">
-                                        <rect key="frame" x="256" y="16" width="51" height="27"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dbf-7O-dHe">
-                                        <rect key="frame" x="256" y="14" width="51" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="onDone:" destination="oYH-tM-WAy" eventType="touchUpInside" id="oCq-RL-VKb"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </scrollView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="photo_actions" id="w93-tO-qhu">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="doneButton" id="rgQ-6b-Zdm">
+                                <rect key="frame" x="249" y="17" width="51" height="27"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dbf-7O-dHe">
+                                <rect key="frame" x="249" y="17" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onDone:" destination="oYH-tM-WAy" eventType="touchUpInside" id="oCq-RL-VKb"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
